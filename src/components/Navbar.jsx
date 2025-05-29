@@ -4,7 +4,7 @@ const Navbar = () => {
         <div className="logo">
             <a className="text-2xl font-bold" href="/">Ademto</a>
         </div>
-        <ul className="nav-links flex gap-10">
+        <ul className="hidden md:flex gap-10">
             <li><a href="#">About</a></li>
             <li><a href="#">Tools</a></li>
             <li><a href="#">Categories</a></li>

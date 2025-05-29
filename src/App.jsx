@@ -13,7 +13,7 @@ function App() {
   return (
     <section>
       <Header />
-      <div className="p-4 lg:w-2/3 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mx-auto mt-10">
+      <div className="p-4 lg:w-2/3 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5 mx-auto mt-10">
         {topToolsElements}
       </div>
       <div className="lg:w-2/3 p-4 mx-auto mt-10">

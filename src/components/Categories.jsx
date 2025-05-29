@@ -11,7 +11,7 @@ const Categories = () => {
                     <div className="h-1 bg-slate-100">
                         <div className="w-24 h-full bg-black"></div>
                     </div>
-                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mx-auto mt-10">
+                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5 mx-auto mt-10">
                         {allTools.map(tool => (
                             tool.categories.includes(category) && <ToolTag tool={tool} />
                         ))}
