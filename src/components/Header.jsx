@@ -4,7 +4,7 @@ import Search from './Search'
 
 const Header = () => {
   return (
-    <section  className='bg-[#fefae0] h-96'>
+    <section  className='bg-[#fefae0] md:h-96'>
         <div className='container mx-auto'>
             <Navbar />
             <HeroSection />

@@ -13,10 +13,10 @@ function App() {
   return (
     <section>
       <Header />
-      <div className="container grid grid-cols-5 gap-10 mx-auto mt-10">
+      <div className="p-4 lg:w-2/3 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-10 mx-auto mt-10">
         {topToolsElements}
       </div>
-      <div className="container mx-auto mt-10">
+      <div className="lg:w-2/3 p-4 mx-auto mt-10">
         <Categories />
       </div>
     </section>
