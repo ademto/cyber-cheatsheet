@@ -6,6 +6,7 @@ import MarkdownRenderer from '../components/MarkdownRenderer'
 
 function Tools() {
   const params = useParams()
+  console.log('Params:', params)
   return (
     <section>
       <div className="container mx-auto">
@@ -13,7 +14,7 @@ function Tools() {
       </div>
       {/* <h1 className="text-2xl font-bold">Tool: {params.name}</h1>
       <p>Here you can find the cheat sheet for the tool: {params.name}</p> */}
-      <MarkdownRenderer tool={params.name} /> 
+      <MarkdownRenderer tool={params.slug} /> 
     </section>
   )
 }

@@ -13,7 +13,7 @@ const MarkdownRenderer = ({ tool }) => {
   }, [])
 
   return (
-    <section className="bg-gray-100 min-h-screen">
+    <section className="min-h-screen">
       <div className="container mx-auto py-10">
         <div
           className="prose max-w-full mx-auto p-4"
