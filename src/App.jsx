@@ -1,25 +1,26 @@
-import { useState } from 'react'
-import Header from './components/Header'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import ToolTag from './components/ToolTag'
 import { topTools, allTools } from './tools'
-import Categories from './components/Categories'
+import Home from './pages/Home'
+import About from './pages/About'
+import Tools from './pages/Tool'
+import Tool from './pages/Tool'
 
 function App() {
-
   const topToolsElements = topTools.map(tool => (
-    <ToolTag tool={tool} />
+    <ToolTag key={tool.id} tool={tool} />
   ))
 
   return (
-    <section>
-      <Header />
-      <div className="p-4 lg:w-2/3 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5 mx-auto mt-10">
-        {topToolsElements}
-      </div>
-      <div className="lg:w-2/3 p-4 mx-auto mt-10">
-        <Categories />
-      </div>
-    </section>
+    <Router>
+      
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/tools" element={<Tools />} />
+        <Route path="/:name" element={<Tool />} />
+      </Routes>
+    </Router>
   )
 }
 

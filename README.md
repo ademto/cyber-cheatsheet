@@ -1,12 +1,107 @@
-# React + Vite
+# 🛡️ Cyber Cheatsheet
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Cyber Cheatsheet** is a curated, categorized collection of cybersecurity tools, commands, techniques, and resources — designed to help penetration testers, blue teamers, SOC analysts, and cybersecurity enthusiasts access critical information faster.
 
-Currently, two official plugins are available:
+🌐 **Live Site**: [cyber-cheatsheet.netlify.app](https://cyber-cheatsheet.netlify.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📚 What You’ll Find
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🧰 **Cybersecurity Tools** organized by category (e.g., Pentesting, Forensics, Networking, SOC)
+- 💻 **Common Commands & Options** for each tool
+- 📄 **GitHub-Flavored Markdown** + Frontmatter powered entries
+- 🧠 Cheat-style layout optimized for fast access and learning
+
+---
+
+## 🗂️ Categories
+
+- Penetration Testing  
+- Blue Team / SOC  
+- Cloud Security  
+- Network Security  
+- Digital Forensics  
+- Social Engineering  
+- Malware Analysis  
+- and more...
+
+---
+
+## ⚙️ Tech Stack
+
+- 🧑‍💻 React + Tailwind CSS  
+- 📄 Markdown (with `gray-matter` + `react-markdown`)  
+- ✨ GitHub Pages / Netlify deployment  
+
+---
+
+## 🚀 How to Use
+
+```bash
+# Clone the project
+git clone https://github.com/your-username/cyber-cheatsheet.git
+cd cyber-cheatsheet
+
+# Install dependencies
+npm install
+
+# Run locally
+npm run dev
+```
+
+---
+
+## ✍️ Contributing
+
+Want to add a new tool or cheat sheet? Follow these steps:
+
+1. Fork this repo.
+2. Create a `.md` file in the `tools/` folder with proper frontmatter.
+3. Submit a pull request.
+
+### Example `.md` File:
+
+```yaml
+---
+name: Nmap
+slug: nmap
+categories: [Penetration Testing, Reconnaissance]
+tag: "#Network"
+bgColor: "bg-blue-100"
+textColor: "text-blue-800"
+---
+
+## Overview
+
+Brief tool description...
+
+## Common Commands
+
+| Command | Description |
+|---------|-------------|
+| nmap -sS | Perform a SYN scan |
+| nmap -A  | Enable OS detection and version scanning |
+```
+
+---
+
+## 📬 Contact
+
+Have ideas or want to collaborate?  
+- [LinkedIn](https://www.linkedin.com/in/your-profile)  
+- [Open an Issue](https://github.com/your-username/cyber-cheatsheet/issues)
+
+---
+
+## ⭐ Show Your Support
+
+Give a ⭐ if this project helps you, and share it with others in the cybersecurity community!
+
+---
+
+## 🛠️ Badges
+
+![Build Status](https://img.shields.io/github/workflow/status/your-username/cyber-cheatsheet/CI)
+![License](https://img.shields.io/github/license/your-username/cyber-cheatsheet)
+![Contributors](https://img.shields.io/github/contributors/your-username/cyber-cheatsheet)

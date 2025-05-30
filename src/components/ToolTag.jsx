@@ -1,8 +1,10 @@
+import { Link } from 'react-router-dom'
+
 const ToolTag = ({ tool }) => {
   return (
-    <a className={`${tool.bgColor} ${tool.textColor} px-6 py-4 rounded-lg`} href="#">
-            {tool.name}
-    </a>
+    <Link className={`${tool.bgColor} ${tool.textColor} px-6 py-4 rounded-lg`} to={tool.name}>
+      {tool.name}
+    </Link>
   )
 }
 
