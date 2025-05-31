@@ -1,8 +1,7 @@
-# SQLMap Commands Cheat Sheet
+## SQLMap Commands Cheat Sheet
 
----
 
-## 🔍 1. Discovery & Detection
+### 🔍 1. Discovery & Detection
 Commands to identify SQL injection vulnerabilities and types.
 
 | Command | Description |
@@ -17,7 +16,7 @@ Commands to identify SQL injection vulnerabilities and types.
 
 ---
 
-## 🏗️ 2. Database Structure Enumeration
+### 🏗️ 2. Database Structure Enumeration
 Commands to map out databases, tables, and columns.
 
 | Command | Description |
@@ -28,7 +27,7 @@ Commands to map out databases, tables, and columns.
 
 ---
 
-## 🧾 3. Data Extraction
+### 🧾 3. Data Extraction
 Commands to retrieve data from database tables.
 
 | Command | Description |
@@ -39,7 +38,7 @@ Commands to retrieve data from database tables.
 
 ---
 
-## 🖥️ 4. Shell Access & File Operations
+### 🖥️ 4. Shell Access & File Operations
 Commands for advanced exploitation and server interaction.
 
 | Command | Description |
@@ -51,7 +50,7 @@ Commands for advanced exploitation and server interaction.
 
 ---
 
-## 🧰 5. Customization & Headers
+### 🧰 5. Customization & Headers
 Fine-tune HTTP requests with headers, cookies, and method.
 
 | Command | Description |
@@ -64,7 +63,7 @@ Fine-tune HTTP requests with headers, cookies, and method.
 
 ---
 
-## 🛡️ 6. Evading Detection
+### 🛡️ 6. Evading Detection
 Options to bypass Web Application Firewalls (WAFs) and filtering.
 
 | Command | Description |
@@ -76,7 +75,7 @@ Options to bypass Web Application Firewalls (WAFs) and filtering.
 
 ---
 
-## 🧪 7. Output & Logging
+### 🧪 7. Output & Logging
 Control output saving and verbosity.
 
 | Command | Description |
@@ -87,7 +86,7 @@ Control output saving and verbosity.
 
 ---
 
-## 📁 8. Configuration & Help
+### 📁 8. Configuration & Help
 Helpful commands for configuration and assistance.
 
 | Command | Description |
@@ -98,7 +97,7 @@ Helpful commands for configuration and assistance.
 
 ---
 
-# Example Usage
+## Example Usage {.cols-1}
 
 ```bash
 # Test a URL for SQL Injection

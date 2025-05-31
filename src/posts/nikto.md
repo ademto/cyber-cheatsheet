@@ -1,6 +1,6 @@
-# Nikto Command Reference
+## Nikto Command Reference
 
-## 🔍 Basic Scanning
+### 🔍 Basic Scanning
 
 | Function               | Command                              | Example                                           |
 |------------------------|---------------------------------------|--------------------------------------------------|
@@ -10,7 +10,7 @@
 | Ignore SSL Cert Check  | `nikto -h <target_url> -ssl -noverify`| `nikto -h https://example.com -ssl -noverify`   |
 | Host Header Injection  | `nikto -h <target_url> -host <host>` | `nikto -h http://example.com -host test.com`     |
 
-## ⚙️ Configuration & Output
+### ⚙️ Configuration & Output
 
 | Function                  | Command                                              | Example                                                 |
 |---------------------------|-------------------------------------------------------|----------------------------------------------------------|
@@ -19,7 +19,7 @@
 | Specify Config File       | `nikto -config <path_to_config>`                    | `nikto -config /etc/nikto.conf`                          |
 | Use Custom User-Agent     | `nikto -h <target_url> -useragent "<agent>"`        | `nikto -h http://example.com -useragent "MyScanner"`     |
 
-## 🧩 Plugins & Tuning
+### 🧩 Plugins & Tuning
 
 | Function                 | Command                                           | Example                                               |
 |--------------------------|--------------------------------------------------|--------------------------------------------------------|
@@ -28,7 +28,7 @@
 | Disable 404 Checks       | `nikto -h <target_url> -no404`                  | `nikto -h http://example.com -no404`                   |
 | Scan Tuning              | `nikto -Tuning <option>`                        | `nikto -Tuning 1` (1 = file upload checks only)        |
 
-## 🚀 Performance & Rate Limiting
+### 🚀 Performance & Rate Limiting
 
 | Function                   | Command                                             | Example                                              |
 |----------------------------|----------------------------------------------------|-------------------------------------------------------|
@@ -36,7 +36,7 @@
 | Throttle Requests (Delay)  | `nikto -h <target_url> -delay <seconds>`           | `nikto -h http://example.com -delay 2`               |
 | Max Requests per Second    | `nikto -h <target_url> -maxrate <rate>` (if supported) | `nikto -h http://example.com -maxrate 5`          |
 
-## 🔄 Updates & Info
+### 🔄 Updates & Info
 
 | Function                   | Command                 | Example                     |
 |----------------------------|--------------------------|-----------------------------|

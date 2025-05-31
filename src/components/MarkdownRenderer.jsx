@@ -15,8 +15,8 @@ const MarkdownRenderer = ({ tool }) => {
   return (
     <section className="min-h-screen">
       <div className="container mx-auto py-10">
-        <div
-          className="prose max-w-full mx-auto p-4"
+        <div id='mdLayout'
+          className="mdLayout prose max-w-full mx-auto p-4"
           dangerouslySetInnerHTML={{ __html: markdownContent }} // Render HTML
         ></div>
       </div>

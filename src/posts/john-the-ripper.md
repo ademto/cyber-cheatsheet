@@ -1,6 +1,6 @@
-# John the Ripper Command Reference
+## John the Ripper Command Reference
 
-## 🚀 Basic Usage
+### 🚀 Basic Usage
 
 | Function             | Command                                  | Example                                |
 |----------------------|-------------------------------------------|----------------------------------------|
@@ -11,7 +11,7 @@
 | Resume from File     | `john --restore=<restore_file>`          | `john --restore=./session.rec`         |
 | Session Management   | `john --session=<name> <file>`           | `john --session=crack1 hashes.txt`     |
 
-## 🧠 Attack Modes
+### 🧠 Attack Modes
 
 | Mode                  | Command                                   | Example                                 |
 |-----------------------|--------------------------------------------|-----------------------------------------|
@@ -23,7 +23,7 @@
 | Mask Mode             | `john --mask=?l?l?l?d <password_file>`    | `john --mask=?l?l?l?d hashes.txt`        |
 | Custom Rules          | `john --rules=<rule> <password_file>`     | `john --rules=custom hashes.txt`        |
 
-## 🧩 Hashes & Formats
+### 🧩 Hashes & Formats
 
 | Function                | Command                                   | Example                                   |
 |--------------------------|--------------------------------------------|-------------------------------------------|
@@ -31,7 +31,7 @@
 | Auto Format Detection    | `john --format=auto <password_file>`      | `john --format=auto hashes.txt`           |
 | List Supported Formats   | `john --list=formats`                     | `john --list=formats`                     |
 
-## ⚙️ Performance & Customization
+### ⚙️ Performance & Customization
 
 | Function                     | Command                                      | Example                                     |
 |------------------------------|-----------------------------------------------|---------------------------------------------|
@@ -39,7 +39,7 @@
 | Save Memory                  | `john --save-memory=<level> <password_file>` | `john --save-memory=30 hashes.txt`          |
 | Verbose Output               | `john --verbose <password_file>`             | `john --verbose hashes.txt`                 |
 
-## 📦 Output Examples
+### 📦 Output Examples {.col-span-2}
 
 | Command                          | Output Example                                                            |
 |----------------------------------|-----------------------------------------------------------------------------|

@@ -1,6 +1,6 @@
-# WPScan Cheat Sheet
+## WPScan Cheat Sheet
 
-## 1. Basic Commands
+### 1. Basic Commands
 
 | Command                  | Description                                       | Example                                      |
 |--------------------------|---------------------------------------------------|----------------------------------------------|
@@ -10,7 +10,7 @@
 | `wpscan --version`       | Displays the current version of WPScan installed. | `wpscan --version`                           |
 | `wpscan -h`              | Another command to display help.                  | `wpscan -h`                                  |
 
-## 2. Enumerate Commands
+### 2. Enumerate Commands
 
 | Command                | Description                            | Example                                                       |
 |------------------------|----------------------------------------|---------------------------------------------------------------|
@@ -24,7 +24,7 @@
 | `--enumerate cb`       | Enumerates wp-config.php backups.      | `wpscan --url http://example.com --enumerate cb`             |
 | `--enumerate dbe`      | Enumerates database exports.           | `wpscan --url http://example.com --enumerate dbe`            |
 
-## 3. Advanced Scanning
+### 3. Advanced Scanning
 
 | Command                         | Description                                               | Example                                                             |
 |----------------------------------|-----------------------------------------------------------|---------------------------------------------------------------------|
@@ -36,7 +36,7 @@
 | `--exclude-path <path>`         | Excludes specific paths from the scan.                    | `wpscan --url http://example.com --exclude-path /wp-admin`        |
 | `--force`                       | Disables WordPress detection (forces the scan).           | `wpscan --url http://example.com --force`                         |
 
-## 4. Proxy and User-Agent
+### 4. Proxy and User-Agent
 
 | Command                          | Description                              | Example                                                             |
 |----------------------------------|------------------------------------------|---------------------------------------------------------------------|
@@ -45,7 +45,7 @@
 | `--user-agent <user-agent>`      | Use a custom user-agent string.          | `wpscan --url http://example.com --user-agent "CustomUserAgent"`   |
 | `--random-user-agent`            | Use a random user-agent for the scan.    | `wpscan --url http://example.com --random-user-agent`              |
 
-## 5. Output Options
+### 5. Output Options
 
 | Command               | Description                                        | Example                                                   |
 |------------------------|----------------------------------------------------|-----------------------------------------------------------|
@@ -54,7 +54,7 @@
 | `--store-requests`    | Store HTTP requests and responses during the scan. | `wpscan --url http://example.com --store-requests`        |
 | `--verbose`           | Show detailed output for the scan.                 | `wpscan --url http://example.com --verbose`               |
 
-## 6. Brute Force and Passwords
+### 6. Brute Force and Passwords
 
 | Command                              | Description                                       | Example                                                              |
 |--------------------------------------|---------------------------------------------------|----------------------------------------------------------------------|
@@ -62,14 +62,14 @@
 | `-U <user-file>`                     | Supply a list of usernames for enumeration.        | `wpscan --url http://example.com -U users.txt`                    |
 | `--brute --wordlist <path>`         | Perform brute force with a password list.         | `wpscan --url http://example.com --brute --wordlist wordlist.txt` |
 
-## 7. Docker Usage
+### 7. Docker Usage
 
 | Command                                             | Description                                     | Example                                                                       |
 |-----------------------------------------------------|-------------------------------------------------|-------------------------------------------------------------------------------|
 | `docker pull wpscanteam/wpscan`                     | Pull the WPScan image from Docker Hub.          | `docker pull wpscanteam/wpscan`                                              |
 | `docker run -it --rm wpscanteam/wpscan --url <url>` | Run WPScan in Docker with the specified URL.    | `docker run -it --rm wpscanteam/wpscan --url http://example.com`            |
 
-## 8. WPScan Scanning with Proxy and Custom User-Agent
+### 8. WPScan Scanning with Proxy and Custom User-Agent
 
 | Command                          | Description                               | Example                                                             |
 |----------------------------------|-------------------------------------------|---------------------------------------------------------------------|
@@ -77,7 +77,7 @@
 | `--proxy-auth <username:password>` | Provide authentication for the proxy server. | `wpscan --url http://example.com --proxy-auth username:password`   |
 | `--user-agent <user-agent>`      | Set a custom user-agent string for requests. | `wpscan --url http://example.com --user-agent "CustomUserAgent"`   |
 
-## Summary of Useful Commands
+### Summary of Useful Commands
 
 | Function               | Command                                        | Example                                                            |
 |------------------------|-----------------------------------------------|--------------------------------------------------------------------|

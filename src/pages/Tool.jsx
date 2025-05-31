@@ -8,13 +8,13 @@ function Tools() {
   const params = useParams()
   console.log('Params:', params)
   return (
-    <section>
+    <section className='bg-gray-100'>
       <div className="container mx-auto">
         <Navbar />
       </div>
       {/* <h1 className="text-2xl font-bold">Tool: {params.name}</h1>
       <p>Here you can find the cheat sheet for the tool: {params.name}</p> */}
-      <MarkdownRenderer tool={params.slug} /> 
+      <MarkdownRenderer tool={params.slug } /> 
     </section>
   )
 }
