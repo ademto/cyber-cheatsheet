@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import markdownParser from '../utils/markdownParser';
-import ComingSoon from '../pages/ComingSoon';
+import ComingSoon from './ComingSoon';
 
 const MarkdownRenderer = ({ tool }) => {
   const [markdownContent, setMarkdownContent] = useState('');
