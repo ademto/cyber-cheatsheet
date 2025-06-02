@@ -4,7 +4,6 @@ import Navbar from '../components/Navbar'
 function About() {
   return (
     <section>
-      <Navbar />
       <div className="container mx-auto flex flex-col gap-10 mt-10">
           <h1 className="text-2xl font-bold">About Cyber Cheatsheet</h1>
           <div>

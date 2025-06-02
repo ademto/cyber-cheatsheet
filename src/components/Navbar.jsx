@@ -1,8 +1,9 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 const Navbar = () => {
+  const { pathname } = useLocation();
   return (
-    <div className='border-b-2 border-[#E5E8EB]'>
+    <div className={`${pathname === "/" ? "bg-[#fefae0]" : "bg-white"} border-b-2 border-[#E5E8EB] `}>
       <div className="container mx-auto flex items-center justify-between h-20 px-4">
           <div className="logo">
               <Link className="text-2xl font-bold" to="/">Ademto</Link>
