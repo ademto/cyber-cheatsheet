@@ -168,8 +168,8 @@ export const allTools = [
   
     // Exploitation
     {
-      name: "Metasploit Framework",
-      slug: "metasploit-framework",
+      name: "Metasploit",
+      slug: "metasploit",
       description: "Penetration testing platform for exploiting vulnerabilities.",
       categories: ["Exploitation", "Penetration Testing"],
       tag: "#Exploitation",
