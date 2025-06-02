@@ -10,7 +10,7 @@ const MarkdownRenderer = ({ tool }) => {
   useEffect(() => {
     const fetchMarkdown = async () => {
       try {
-        const response = await fetch("/posts/nmap.md");
+        const response = await fetch("/src/posts/nmap.md");
 
         // Check if the response is HTML, which means the file was not found
         const contentType = response.headers.get('Content-Type');
