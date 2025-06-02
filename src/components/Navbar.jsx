@@ -8,7 +8,6 @@ const Navbar = () => {
         </div>
         <ul className="hidden md:flex gap-10">
             <li><Link to="/about">About</Link></li>
-            <li><Link to="/tools">Tools</Link></li>
             <li><Link to="/categories">Categories</Link></li>
             <li><Link to="/glossary">Glossary</Link></li>
         </ul>

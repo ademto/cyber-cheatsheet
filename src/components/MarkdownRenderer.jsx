@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import markdownParser from '../utils/markdownParser';
-import ComingSoon from '../pages/ComingSoon'; // Import your ComingSoon component
+import ComingSoon from '../pages/ComingSoon';
 
 const MarkdownRenderer = ({ tool }) => {
   const [markdownContent, setMarkdownContent] = useState('');
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true); // Track loading state
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchMarkdown = async () => {
