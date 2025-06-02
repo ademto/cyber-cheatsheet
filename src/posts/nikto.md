@@ -1,46 +1,45 @@
-## Nikto Command Reference
+## Nikto Command Reference {.cols-2}
 
 ### 🔍 Basic Scanning
 
-| Function               | Command                              | Example                                           |
-|------------------------|---------------------------------------|--------------------------------------------------|
-| Start Basic Scan       | `nikto -h <target_url>`              | `nikto -h http://example.com`                    |
-| Specify Port           | `nikto -h <target_url> -p <port>`    | `nikto -h http://example.com -p 8080`            |
-| Use SSL                | `nikto -h <target_url> -ssl`         | `nikto -h https://example.com -ssl`              |
-| Ignore SSL Cert Check  | `nikto -h <target_url> -ssl -noverify`| `nikto -h https://example.com -ssl -noverify`   |
-| Host Header Injection  | `nikto -h <target_url> -host <host>` | `nikto -h http://example.com -host test.com`     |
+| Function              | Command                                | Example                                       |
+| --------------------- | -------------------------------------- | --------------------------------------------- |
+| Start Basic Scan      | `nikto -h <target_url>`                | `nikto -h http://example.com`                 |
+| Specify Port          | `nikto -h <target_url> -p <port>`      | `nikto -h http://example.com -p 8080`         |
+| Use SSL               | `nikto -h <target_url> -ssl`           | `nikto -h https://example.com -ssl`           |
+| Ignore SSL Cert Check | `nikto -h <target_url> -ssl -noverify` | `nikto -h https://example.com -ssl -noverify` |
+| Host Header Injection | `nikto -h <target_url> -host <host>`   | `nikto -h http://example.com -host test.com`  |
 
 ### ⚙️ Configuration & Output
 
-| Function                  | Command                                              | Example                                                 |
-|---------------------------|-------------------------------------------------------|----------------------------------------------------------|
-| Save Output (TXT)         | `nikto -h <target_url> -o <file>`                   | `nikto -h http://example.com -o scan.txt`                |
-| Save Output (HTML)        | `nikto -h <target_url> -o <file> -Format html`      | `nikto -h http://example.com -o report.html -Format html`|
-| Specify Config File       | `nikto -config <path_to_config>`                    | `nikto -config /etc/nikto.conf`                          |
-| Use Custom User-Agent     | `nikto -h <target_url> -useragent "<agent>"`        | `nikto -h http://example.com -useragent "MyScanner"`     |
+| Function              | Command                                        | Example                                                   |
+| --------------------- | ---------------------------------------------- | --------------------------------------------------------- |
+| Save Output (TXT)     | `nikto -h <target_url> -o <file>`              | `nikto -h http://example.com -o scan.txt`                 |
+| Save Output (HTML)    | `nikto -h <target_url> -o <file> -Format html` | `nikto -h http://example.com -o report.html -Format html` |
+| Specify Config File   | `nikto -config <path_to_config>`               | `nikto -config /etc/nikto.conf`                           |
+| Use Custom User-Agent | `nikto -h <target_url> -useragent "<agent>"`   | `nikto -h http://example.com -useragent "MyScanner"`      |
 
 ### 🧩 Plugins & Tuning
 
-| Function                 | Command                                           | Example                                               |
-|--------------------------|--------------------------------------------------|--------------------------------------------------------|
-| Use Plugins              | `nikto -h <target_url> -Plugins <plugin>`       | `nikto -h http://example.com -Plugins all`             |
-| List All Plugins         | `nikto -list-plugins`                           | `nikto -list-plugins`                                  |
-| Disable 404 Checks       | `nikto -h <target_url> -no404`                  | `nikto -h http://example.com -no404`                   |
-| Scan Tuning              | `nikto -Tuning <option>`                        | `nikto -Tuning 1` (1 = file upload checks only)        |
+| Function           | Command                                   | Example                                         |
+| ------------------ | ----------------------------------------- | ----------------------------------------------- |
+| Use Plugins        | `nikto -h <target_url> -Plugins <plugin>` | `nikto -h http://example.com -Plugins all`      |
+| List All Plugins   | `nikto -list-plugins`                     | `nikto -list-plugins`                           |
+| Disable 404 Checks | `nikto -h <target_url> -no404`            | `nikto -h http://example.com -no404`            |
+| Scan Tuning        | `nikto -Tuning <option>`                  | `nikto -Tuning 1` (1 = file upload checks only) |
 
 ### 🚀 Performance & Rate Limiting
 
-| Function                   | Command                                             | Example                                              |
-|----------------------------|----------------------------------------------------|-------------------------------------------------------|
-| Set Timeout                | `nikto -timeout <seconds>`                         | `nikto -timeout 10`                                  |
-| Throttle Requests (Delay)  | `nikto -h <target_url> -delay <seconds>`           | `nikto -h http://example.com -delay 2`               |
-| Max Requests per Second    | `nikto -h <target_url> -maxrate <rate>` (if supported) | `nikto -h http://example.com -maxrate 5`          |
+| Function                  | Command                                                | Example                                  |
+| ------------------------- | ------------------------------------------------------ | ---------------------------------------- |
+| Set Timeout               | `nikto -timeout <seconds>`                             | `nikto -timeout 10`                      |
+| Throttle Requests (Delay) | `nikto -h <target_url> -delay <seconds>`               | `nikto -h http://example.com -delay 2`   |
+| Max Requests per Second   | `nikto -h <target_url> -maxrate <rate>` (if supported) | `nikto -h http://example.com -maxrate 5` |
 
 ### 🔄 Updates & Info
 
-| Function                   | Command                 | Example                     |
-|----------------------------|--------------------------|-----------------------------|
-| Update Vulnerability DB    | `nikto -update`          | `nikto -update`             |
-| Display Version            | `nikto -Version`         | `nikto -Version`            |
-| Display Help Menu          | `nikto -H` or `--help`   | `nikto --help`              |
-
+| Function                | Command                | Example          |
+| ----------------------- | ---------------------- | ---------------- |
+| Update Vulnerability DB | `nikto -update`        | `nikto -update`  |
+| Display Version         | `nikto -Version`       | `nikto -Version` |
+| Display Help Menu       | `nikto -H` or `--help` | `nikto --help`   |
