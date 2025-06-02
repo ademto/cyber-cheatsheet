@@ -1,5 +1,6 @@
 import ToolTag from './ToolTag'
 import { categories, allTools } from '../tools'
+import { nanoid } from 'nanoid'
 
 const Categories = () => {
 
@@ -13,7 +14,7 @@ const Categories = () => {
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5 mx-auto mt-10">
                         {allTools.map(tool => (
-                            tool.categories.includes(category) && <ToolTag tool={tool} />
+                            tool.categories.includes(category) && <ToolTag key={nanoid()} tool={tool} />
                         ))}
                         <p></p>
                     </div>

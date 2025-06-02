@@ -1,4 +1,5 @@
 import React from 'react'
+import { nanoid } from 'nanoid'
 import Header from '../components/Header'
 import ToolTag from '../components/ToolTag'
 import Categories from '../components/Categories'
@@ -6,8 +7,8 @@ import { topTools, allTools } from '../tools'
 
 function Home() {
     const topToolsElements = topTools.map(tool => (
-        <ToolTag tool={tool} />
-      ))
+        <ToolTag key={nanoid()} tool={tool} />
+    ))
 
     return (
         <section>
