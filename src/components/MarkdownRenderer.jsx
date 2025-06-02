@@ -10,7 +10,7 @@ const MarkdownRenderer = ({ tool }) => {
   useEffect(() => {
     const fetchMarkdown = async () => {
       try {
-        const response = await fetch(`/posts/${tool}.md`);
+        const response = await fetch(`/src/posts/${tool}.md`);
 
         // Check if the response is HTML, which means the file was not found
         const contentType = response.headers.get('Content-Type');
@@ -50,7 +50,7 @@ const MarkdownRenderer = ({ tool }) => {
 
   return (
     <section className="min-h-screen">
-      <div className="container mx-auto py-10">
+      <div className="">
         {loading && <div>Loading...</div>} {/* Show loading indicator */}
         {error ? (
           <div style={{ color: 'red' }}>{error}</div> // Show error message if fetching fails
@@ -59,7 +59,7 @@ const MarkdownRenderer = ({ tool }) => {
         ) : (
           <div
             id="mdLayout"
-            className="mdLayout prose max-w-full mx-auto p-4"
+            className="mdLayout prose max-w-full mx-auto"
             dangerouslySetInnerHTML={{ __html: markdownContent }} // Render parsed markdown
           />
         )}
