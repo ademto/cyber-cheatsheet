@@ -6,7 +6,7 @@ import MarkdownRenderer from '../components/MarkdownRenderer'
 
 function Tools() {
   const params = useParams()
-  console.log('Params:', params)
+
   return (
     <section className='bg-gray-100'>
       <div className="container mx-auto">

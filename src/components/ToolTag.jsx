@@ -4,8 +4,6 @@ import { nanoid } from 'nanoid'
 
 
 const ToolTag = ({ tool }) => {
-  const exists = allTools.some(t => t.slug === tool.slug)
-  console.log(exists ? "domiso" : "falado")
   const id = nanoid()
   return (
     <Link
