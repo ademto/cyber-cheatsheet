@@ -6,6 +6,7 @@ const MarkdownRenderer = ({ tool }) => {
   const [markdownContent, setMarkdownContent] = useState('');
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [fileMissing, setFileMissing] = useState(false); // Track if file is missing
 
   useEffect(() => {
     const fetchMarkdown = async () => {
@@ -15,6 +16,7 @@ const MarkdownRenderer = ({ tool }) => {
         // Check if the response is HTML, which means the file was not found
         const contentType = response.headers.get('Content-Type');
         if (contentType && contentType.includes('text/html')) {
+          setFileMissing(true); // File is missing
           setError(null); // No error, just file missing
           setMarkdownContent(''); // Clear content
           return;
@@ -29,7 +31,8 @@ const MarkdownRenderer = ({ tool }) => {
 
         // Check if the file content is empty or invalid
         if (!text || text.trim() === '') {
-          setError(null); // No error, just file empty
+          setFileMissing(true); // File content is empty
+          setError(null); // No error, just empty file
           setMarkdownContent(''); // Clear content
           return;
         }
@@ -52,10 +55,10 @@ const MarkdownRenderer = ({ tool }) => {
     <section className="min-h-screen">
       <div className="">
         {loading && <div>Loading...</div>} {/* Show loading indicator */}
-        {error ? (
+        {fileMissing ? (
+          <ComingSoon /> // Show ComingSoon component if the file is missing or empty
+        ) : error ? (
           <div style={{ color: 'red' }}>{error}</div> // Show error message if fetching fails
-        ) : markdownContent === '' ? (
-          <ComingSoon /> // Show ComingSoon component if file is missing or empty
         ) : (
           <div
             id="mdLayout"
