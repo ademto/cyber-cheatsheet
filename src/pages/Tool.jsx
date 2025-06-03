@@ -9,7 +9,7 @@ function Tools() {
 
   return (
     <section className='bg-[#f8f9fa]'>
-      <div className="container mx-auto">
+      <div className="container mx-auto pb-10">
         <Link to=".." className='inline-block shadow-md px-6 py-2 bg-white rounded-sm mt-10 cursor-pointer'>Back</Link>
         <MarkdownRenderer tool={params.slug } /> 
       </div>

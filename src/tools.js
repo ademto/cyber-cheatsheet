@@ -12,102 +12,104 @@ export const categories = [
     "Social Engineering",
     "Blue Team / SOC Tools",
     "Cloud Security",
-    "Binary Analysis / Reverse Engineering"
+    "Binary Analysis / Reverse Engineering",
+    "Command Line Essentials"
 ];
 
   
 export const topTools = [
-    {
-      name: "Nmap",
-      slug: "nmap",
-      description: "Network discovery and port scanning tool.",
-      categories: ["Network Security", "Penetration Testing"],
-      tag: "#Network",
-      bgColor: "bg-blue-100",
-      textColor: "text-blue-800",
-    },
-    {
-      name: "Metasploit",
-      slug: "metasploit",
-      description: "Framework for developing and executing exploits.",
-      categories: ["Penetration Testing", "Exploitation"],
-      tag: "#Exploitation",
-      bgColor: "bg-red-100",
-      textColor: "text-red-800",
-    },
-    {
-      name: "Gobuster",
-      slug: "gobuster",
-      description: "Directory and file brute-forcing tool.",
-      categories: ["Web Application Security", "Penetration Testing"],
-      tag: "#Web",
-      bgColor: "bg-yellow-100",
-      textColor: "text-yellow-800",
-    },
-    {
-      name: "Hydra",
-      slug: "hydra",
-      description: "Login cracker for multiple protocols.",
-      categories: ["Brute Force", "Network Security"],
-      tag: "#BruteForce",
-      bgColor: "bg-purple-100",
-      textColor: "text-purple-800",
-    },
-    {
-      name: "Burp Suite",
-      slug: "burpsuite",
-      description: "Web vulnerability scanner and proxy.",
-      categories: ["Web Application Security", "Penetration Testing"],
-      tag: "#Web",
-      bgColor: "bg-orange-100",
-      textColor: "text-orange-800",
-    },
-    {
-      name: "John the Ripper",
-      slug: "john-the-ripper",
-      description: "Popular password cracking tool.",
-      categories: ["Password Cracking", "Forensics"],
-      tag: "#Cracking",
-      bgColor: "bg-green-100",
-      textColor: "text-green-800",
-    },
-    {
-      name: "WPScan",
-      slug: "wpscan",
-      description: "WordPress vulnerability scanner.",
-      categories: ["Web Application Security", "CMS Security"],
-      tag: "#CMS",
-      bgColor: "bg-pink-100",
-      textColor: "text-pink-800",
-    },
-    {
-      name: "SQLMap",
-      slug: "sqlmap",
-      description: "Automated SQL injection and database takeover tool.",
-      categories: ["Database Security", "Web Application Security"],
-      tag: "#Database",
-      bgColor: "bg-indigo-100",
-      textColor: "text-indigo-800",
-    },
-    {
-      name: "Nikto",
-      slug: "nikto",
-      description: "Web server scanner for detecting vulnerabilities and misconfigurations.",
-      categories: ["Web Application Security", "Reconnaissance"],
-      tag: "#Web",
-      bgColor: "bg-lime-100",
-      textColor: "text-lime-800",
-    },
-    {
-      name: "ffuf",
-      slug: "ffuf",
-      description: "Fast web fuzzer for discovering hidden directories, files, and parameters.",
-      categories: ["Web Application Security", "Brute Force"],
-      tag: "#Web",
-      bgColor: "bg-yellow-100",
-      textColor: "text-yellow-800",
-    }    
-  ];
+  {
+    name: "Nmap",
+    slug: "nmap",
+    description: "Network discovery and port scanning tool.",
+    categories: ["Network Security", "Penetration Testing"],
+    tag: "#Network",
+    bgColor: "bg-blue-100",
+    textColor: "text-blue-800",
+  },
+  {
+    name: "Metasploit",
+    slug: "metasploit",
+    description: "Framework for developing and executing exploits.",
+    categories: ["Penetration Testing", "Exploitation"],
+    tag: "#Exploitation",
+    bgColor: "bg-red-100",
+    textColor: "text-red-800",
+  },
+  {
+    name: "Gobuster",
+    slug: "gobuster",
+    description: "Directory and file brute-forcing tool.",
+    categories: ["Web Application Security", "Penetration Testing"],
+    tag: "#Web",
+    bgColor: "bg-yellow-100",
+    textColor: "text-yellow-800",
+  },
+  {
+    name: "Hydra",
+    slug: "hydra",
+    description: "Login cracker for multiple protocols.",
+    categories: ["Brute Force", "Network Security"],
+    tag: "#BruteForce",
+    bgColor: "bg-purple-100",
+    textColor: "text-purple-800",
+  },
+  {
+    name: "Burp Suite",
+    slug: "burpsuite",
+    description: "Web vulnerability scanner and proxy.",
+    categories: ["Web Application Security", "Penetration Testing"],
+    tag: "#Web",
+    bgColor: "bg-orange-100",
+    textColor: "text-orange-800",
+  },
+  {
+    name: "John the Ripper",
+    slug: "john-the-ripper",
+    description: "Popular password cracking tool.",
+    categories: ["Password Cracking", "Forensics"],
+    tag: "#Cracking",
+    bgColor: "bg-green-100",
+    textColor: "text-green-800",
+  },
+  {
+    name: "WPScan",
+    slug: "wpscan",
+    description: "WordPress vulnerability scanner.",
+    categories: ["Web Application Security", "CMS Security"],
+    tag: "#CMS",
+    bgColor: "bg-pink-100",
+    textColor: "text-pink-800",
+  },
+  {
+    name: "SQLMap",
+    slug: "sqlmap",
+    description: "Automated SQL injection and database takeover tool.",
+    categories: ["Database Security", "Web Application Security"],
+    tag: "#Database",
+    bgColor: "bg-indigo-100",
+    textColor: "text-indigo-800",
+  },
+  {
+    name: "Nikto",
+    slug: "nikto",
+    description: "Web server scanner for detecting vulnerabilities and misconfigurations.",
+    categories: ["Web Application Security", "Reconnaissance"],
+    tag: "#Web",
+    bgColor: "bg-lime-100",
+    textColor: "text-lime-800",
+  },
+  {
+    name: "ffuf",
+    slug: "ffuf",
+    description: "Fast web fuzzer for discovering hidden directories, files, and parameters.",
+    categories: ["Web Application Security", "Brute Force"],
+    tag: "#Web",
+    bgColor: "bg-yellow-100",
+    textColor: "text-yellow-800",
+  }    
+];
+
   
 export const allTools = [
     // Reconnaissance
@@ -165,6 +167,33 @@ export const allTools = [
       bgColor: "bg-purple-200",
       textColor: "text-purple-900",
     },
+    {
+      name: "Shodan",
+      slug: "shodan",
+      description: "Search engine for Internet-connected devices, useful for reconnaissance and OSINT.",
+      categories: ["Reconnaissance", "OSINT"],
+      tag: "#Recon",
+      bgColor: "bg-indigo-100",
+      textColor: "text-indigo-800",
+    },
+    {
+      name: "Amass",
+      slug: "amass",
+      description: "Tool for DNS enumeration and network mapping.",
+      categories: ["Reconnaissance", "Network Security"],
+      tag: "#DNS",
+      bgColor: "bg-blue-300",
+      textColor: "text-blue-900",
+    },
+    {
+      name: "Sublist3r",
+      slug: "sublist3r",
+      description: "Fast subdomain enumeration tool.",
+      categories: ["Reconnaissance", "OSINT"],
+      tag: "#SubdomainEnumeration",
+      bgColor: "bg-purple-300",
+      textColor: "text-purple-900",
+    },   
   
     // Exploitation
     {
@@ -203,13 +232,22 @@ export const allTools = [
       bgColor: "bg-red-300",
       textColor: "text-red-900",
     },
+    {
+      name: "Impacket",
+      slug: "impacket",
+      description: "Collection of Python scripts for network protocol exploitation, lateral movement, and credential dumping.",
+      categories: ["Post Exploitation", "Active Directory", "Credential Access"],
+      tag: "#PostExploitation",
+      bgColor: "bg-purple-200",
+      textColor: "text-purple-900"
+    },    
   
     // Web Application Security
     {
       name: "Burp Suite",
       slug: "burp-suite",
       description: "Web vulnerability scanner and proxy for testing apps.",
-      categories: ["Web Application Security", "Penetration Testing"],
+      categories: ["Web Application Security", "Brute Force"],
       tag: "#WebSecurity",
       bgColor: "bg-green-100",
       textColor: "text-green-800",
@@ -299,6 +337,24 @@ export const allTools = [
       bgColor: "bg-yellow-300",
       textColor: "text-yellow-900",
     },
+    {
+      name: "Gobuster",
+      slug: "gobuster",
+      description: "Directory and file brute-forcing tool.",
+      categories: ["Web Application Security", "Brute Force"],
+      tag: "#Web",
+      bgColor: "bg-yellow-100",
+      textColor: "text-yellow-800",
+    },
+    {
+      name: "ffuf",
+      slug: "ffuf",
+      description: "Fast web fuzzer for discovering hidden directories, files, and parameters.",
+      categories: ["Web Application Security", "Brute Force"],
+      tag: "#Web",
+      bgColor: "bg-yellow-100",
+      textColor: "text-yellow-800",
+    }, 
   
     // Wireless Attacks
     {
@@ -328,6 +384,15 @@ export const allTools = [
       bgColor: "bg-indigo-300",
       textColor: "text-indigo-900",
     },
+    {
+      name: "Bettercap",
+      slug: "bettercap",
+      description: "Powerful, flexible, and portable tool for network attacks, monitoring, and man-in-the-middle (MITM) activities.",
+      categories: ["Network Security", "Wireless Attacks", "Man-in-the-Middle"],
+      tag: "#Network",
+      bgColor: "bg-yellow-100",
+      textColor: "text-yellow-800"
+    },    
   
     // Post Exploitation
     {
@@ -569,4 +634,50 @@ export const allTools = [
       bgColor: "bg-amber-300",
       textColor: "text-amber-900",
     },
+    // Command Line Essentials
+    {
+      "name": "SSH",
+      "slug": "ssh",
+      "description": "Secure Shell protocol for remote administration and encrypted communication.",
+      "categories": ["Command Line Essentials"],
+      "tag": "#CLI",
+      "bgColor": "bg-gray-200",
+      "textColor": "text-gray-900"
+    },
+    {
+      "name": "Vim",
+      "slug": "vim",
+      "description": "Powerful terminal-based text editor for efficient file editing.",
+      "categories": ["Command Line Essentials"],
+      "tag": "#CLI",
+      "bgColor": "bg-green-100",
+      "textColor": "text-green-800"
+    },
+    {
+      "name": "Tmux",
+      "slug": "tmux",
+      "description": "Terminal multiplexer for managing multiple sessions in one terminal window.",
+      "categories": ["Command Line Essentials"],
+      "tag": "#CLI",
+      "bgColor": "bg-yellow-100",
+      "textColor": "text-yellow-800"
+    },
+    {
+      "name": "cURL",
+      "slug": "curl",
+      "description": "Command-line tool for transferring data with URL syntax — supports HTTP, HTTPS, FTP, and more.",
+      "categories": ["Command Line Essentials"],
+      "tag": "#CLI",
+      "bgColor": "bg-blue-100",
+      "textColor": "text-blue-800"
+    },
+    {
+      "name": "Bash",
+      "slug": "bash",
+      "description": "Popular Unix shell and scripting language used for automation and system tasks.",
+      "categories": ["Command Line Essentials"],
+      "tag": "#CLI",
+      "bgColor": "bg-indigo-100",
+      "textColor": "text-indigo-800"
+    },                    
 ];

@@ -2,7 +2,7 @@
 
 **Cyber Cheatsheet** is a curated, categorized collection of cybersecurity tools, commands, techniques, and resources — designed to help penetration testers, blue teamers, SOC analysts, and cybersecurity enthusiasts access critical information faster.
 
-🌐 **Live Site**: [cyber-cheatsheet.netlify.app](https://cyber-cheatsheet.netlify.app)
+🌐 **Live Site**: [https://cyberref.netlify.app/](https://cyberref.netlify.app/)
 
 ---
 
@@ -17,22 +17,14 @@
 
 ## 🗂️ Categories
 
-- Penetration Testing  
-- Blue Team / SOC  
-- Cloud Security  
-- Network Security  
-- Digital Forensics  
-- Social Engineering  
-- Malware Analysis  
+- Penetration Testing
+- Blue Team / SOC
+- Cloud Security
+- Network Security
+- Digital Forensics
+- Social Engineering
+- Malware Analysis
 - and more...
-
----
-
-## ⚙️ Tech Stack
-
-- 🧑‍💻 React + Tailwind CSS  
-- 📄 Markdown (with `gray-matter` + `react-markdown`)  
-- ✨ GitHub Pages / Netlify deployment  
 
 ---
 
@@ -40,7 +32,7 @@
 
 ```bash
 # Clone the project
-git clone https://github.com/your-username/cyber-cheatsheet.git
+git clone https://github.com/emmanueladetoro/cyber-cheatsheet.git
 cd cyber-cheatsheet
 
 # Install dependencies
@@ -88,9 +80,11 @@ Brief tool description...
 
 ## 📬 Contact
 
-Have ideas or want to collaborate?  
-- [LinkedIn](https://www.linkedin.com/in/your-profile)  
-- [Open an Issue](https://github.com/your-username/cyber-cheatsheet/issues)
+Have ideas or want to collaborate?
+
+- [LinkedIn – Emmanuel Adetoro](https://www.linkedin.com/in/emmanuel-adetoro)
+- 📧 emmanueladetoro72@gmail.com
+- [Open an Issue](https://github.com/emmanueladetoro/cyber-cheatsheet/issues)
 
 ---
 
@@ -102,6 +96,6 @@ Give a ⭐ if this project helps you, and share it with others in the cybersecur
 
 ## 🛠️ Badges
 
-![Build Status](https://img.shields.io/github/workflow/status/your-username/cyber-cheatsheet/CI)
-![License](https://img.shields.io/github/license/your-username/cyber-cheatsheet)
-![Contributors](https://img.shields.io/github/contributors/your-username/cyber-cheatsheet)
+![Build Status](https://img.shields.io/github/actions/workflow/status/emmanueladetoro/cyber-cheatsheet/CI.yml)
+![License](https://img.shields.io/github/license/emmanueladetoro/cyber-cheatsheet)
+![Contributors](https://img.shields.io/github/contributors/emmanueladetoro/cyber-cheatsheet)

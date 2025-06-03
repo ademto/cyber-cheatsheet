@@ -8,7 +8,7 @@ const ToolTag = ({ tool }) => {
   return (
     <Link
       key={id}
-      className={`${tool.bgColor} ${tool.textColor} px-6 py-4 rounded-lg`}
+      className={`${tool.bgColor} ${tool.textColor} px-6 py-4 rounded-lg transition duration-300 ease-in-out`}
       to={`tools/${tool.slug}`}
     >
       {tool.name}
