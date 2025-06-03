@@ -1,21 +1,3 @@
----
-title: Bash
-date: 2020-11-25 18:28:43
-background: bg-[#3e4548]
-tags:
-  - shell
-  - sh
-  - echo
-  - script
-  - linux
-categories:
-  - Programming
-  - Operating System
-intro: This is a quick reference cheat sheet to getting started with linux bash shell scripting.
-plugins:
-  - copyCode
----
-
 ## Getting Started
 
 ### hello.sh
