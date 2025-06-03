@@ -1,5 +1,3 @@
----
-
 ## 🛠️ Burp Suite Setup & Configuration
 
 ### 🔧 Feature Overview
