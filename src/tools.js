@@ -99,14 +99,14 @@ export const topTools = [
       textColor: "text-lime-800",
     },
     {
-      name: "Wireshark",
-      slug: "wireshark",
-      description: "Network protocol analyzer for traffic inspection and troubleshooting.",
-      categories: ["Network Security", "Traffic Analysis"],
-      tag: "#Network",
-      bgColor: "bg-cyan-100",
-      textColor: "text-cyan-800",
-    },
+      name: "ffuf",
+      slug: "ffuf",
+      description: "Fast web fuzzer for discovering hidden directories, files, and parameters.",
+      categories: ["Web Application Security", "Brute Force"],
+      tag: "#Web",
+      bgColor: "bg-yellow-100",
+      textColor: "text-yellow-800",
+    }    
   ];
   
 export const allTools = [

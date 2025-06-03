@@ -1,0 +1,65 @@
+---
+
+## 🛠️ Burp Suite Setup & Configuration
+
+### 🔧 Feature Overview
+
+| Feature        | Steps                                                               |
+| -------------- | ------------------------------------------------------------------- |
+| Proxy Listener | `Proxy > Options > Add` a new listener (e.g., on port 8080).        |
+| CA Certificate | `Proxy > Options` → Import Burp’s CA certificate into your browser. |
+
+### 🧩 Proxy Tab
+
+| Action           | Description                                                              |
+| ---------------- | ------------------------------------------------------------------------ |
+| Intercept On/Off | `Proxy > Intercept` → Toggle “Intercept is on” to enable or disable.     |
+| Forward Request  | While intercepting, press **Forward** to send the request to the server. |
+| Drop Request     | Use **Drop** to cancel the intercepted request.                          |
+
+### 🔁 Repeater Tab
+
+| Action               | Description                                                                             |
+| -------------------- | --------------------------------------------------------------------------------------- |
+| Send Custom Requests | Right-click a request in Proxy or other tabs → **Send to Repeater**, modify, then send. |
+
+### 🚀 Intruder Tab
+
+| Action              | Description                                                                       |
+| ------------------- | --------------------------------------------------------------------------------- |
+| Payload Positioning | Highlight request parts → Add `§` to mark payload insertion points.               |
+| Attack Types        | Sniper, Battering Ram, Pitchfork, Cluster Bomb.                                   |
+| Payload Settings    | Set payload type (e.g., simple list, numbers) → Configure under **Payloads** tab. |
+
+### 🧪 Scanner Tab _(Pro Only)_
+
+| Action           | Description                                                         |
+| ---------------- | ------------------------------------------------------------------- |
+| Passive Scanning | Automatically analyze traffic passing through Burp.                 |
+| Active Scanning  | Right-click a request → **Do active scan** to find vulnerabilities. |
+
+### 🔐 Decoder Tab
+
+| Action        | Description                                                                |
+| ------------- | -------------------------------------------------------------------------- |
+| Decoding Data | Paste encoded data → Choose **Decode as** (e.g., Base64, URL, HTML).       |
+| Encoding Data | Paste plain data → Choose **Encode as** to transform into various formats. |
+
+### 📊 Comparer Tab
+
+| Action                     | Description                                                                    |
+| -------------------------- | ------------------------------------------------------------------------------ |
+| Compare Requests/Responses | Send two requests/responses to **Comparer** → Use **Words** or **Bytes** view. |
+
+### 🧩 Extender Tab
+
+| Action             | Description                                                                            |
+| ------------------ | -------------------------------------------------------------------------------------- |
+| Install Extensions | Go to **Extender > BApp Store** → Browse & install tools (e.g., SQLiPy, JWT Attacker). |
+
+### 🗃️ Miscellaneous
+
+| Action          | Description                                            |
+| --------------- | ------------------------------------------------------ |
+| Save Session    | `Project > Save State` to save current Burp session.   |
+| Export Requests | Right-click a request → **Copy to file** to export it. |
