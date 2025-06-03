@@ -1,4 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
+import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import Search from './Search';
 
 const Navbar = () => {
   const { pathname } = useLocation();
@@ -8,13 +10,16 @@ const Navbar = () => {
           <div className="logo">
               <Link className="text-2xl font-bold" to="/">Ademto</Link>
           </div>
-          <ul className="hidden md:flex gap-10">
-              <li><Link to="/about">About</Link></li>
-              <li><Link to="/">Categories</Link></li>
-              <li><Link to="/">Glossary</Link></li>
-          </ul>
-          <div className="user-actions">
+
+          {/* <div className="user-actions">
               <button className="bg-[#D2E1C1] px-4 py-2 rounded-full">Contact Me</button>
+          </div> */}
+          
+          <div className="icons flex items-center gap-4">
+              <Search />
+              <Link className="text-xl hover:text-zinc-600" to="https://github.com/ademto" ><FaGithub /></Link>
+              <Link className="text-xl hover:text-zinc-600" to="https://www.linkedin.com/in/emmanuel-adetoro/" ><FaLinkedin /></Link>
+              <Link className="text-xl hover:text-zinc-600" to="/" ><FaXTwitter /></Link>
           </div>
       </div>
     </div>
