@@ -6,7 +6,7 @@ import SearchModal from "./SearchModal"
 
 
 export default function Layout() {
-    const [open, setOpen] = useState(true)
+    const [open, setOpen] = useState(false)
     return (
         <div className="site-wrapper">
             <Navbar handleSearch={() => setOpen(prevValue => !prevValue)} />
