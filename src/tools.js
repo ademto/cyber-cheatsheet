@@ -194,6 +194,16 @@ export const allTools = [
       bgColor: "bg-purple-300",
       textColor: "text-purple-900",
     },   
+    {
+      name: "DNSEnum",
+      slug: "dnsenum",
+      description: "Perl-based DNS enumeration tool for discovering subdomains, hosts, and DNS records.",
+      categories: ["Reconnaissance"],
+      tag: "#DNS",
+      bgColor: "bg-yellow-100",
+      textColor: "text-yellow-800",
+    },
+ 
   
     // Exploitation
     {
@@ -245,7 +255,7 @@ export const allTools = [
     // Web Application Security
     {
       name: "Burp Suite",
-      slug: "burp-suite",
+      slug: "burpsuite",
       description: "Web vulnerability scanner and proxy for testing apps.",
       categories: ["Web Application Security", "Brute Force"],
       tag: "#WebSecurity",
@@ -421,15 +431,6 @@ export const allTools = [
       tag: "#HashCapture",
       bgColor: "bg-pink-300",
       textColor: "text-pink-900",
-    },
-    {
-      name: "Meterpreter",
-      slug: "meterpreter",
-      description: "Metasploit payload for post-exploitation tasks.",
-      categories: ["Post Exploitation", "Exploitation"],
-      tag: "#PostExploitation",
-      bgColor: "bg-red-100",
-      textColor: "text-red-800",
     },
   
     // CMS Security

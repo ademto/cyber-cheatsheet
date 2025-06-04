@@ -1,0 +1,54 @@
+## 🔍 Sublist3r Cheatsheet {.cols-2}
+
+### 🧩 Basic Usage
+
+| Command                                   | Description                                                                  |
+| ----------------------------------------- | ---------------------------------------------------------------------------- |
+| `sublist3r -d example.com`                | Enumerate subdomains for `example.com`.                                      |
+| `sublist3r -d example.com -o results.txt` | Save the output to a text file.                                              |
+| `sublist3r -d example.com -p 80,443`      | Perform subdomain discovery and check which ones respond on specified ports. |
+
+---
+
+### ⚙️ Options Overview
+
+| Option             | Description                                                                                                                                                                                    |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `-d <domain>`      | Target domain.                                                                                                                                                                                 |
+| `-b`               | Enable bruteforce using a built-in wordlist.                                                                                                                                                   |
+| `-p <ports>`       | Scan discovered subdomains for specified ports (comma-separated).                                                                                                                              |
+| `-o <output_file>` | Save discovered subdomains to a file.                                                                                                                                                          |
+| `-v`               | Enable verbose mode.                                                                                                                                                                           |
+| `-t <threads>`     | Number of threads to use (default is 10).                                                                                                                                                      |
+| `-e <engines>`     | Specify search engines/APIs to use (comma-separated). Options include: `baidu`, `google`, `bing`, `yahoo`, `ask`, `netcraft`, `dnsdumpster`, `virustotal`, `threatcrowd`, `ssl`, `passivedns`. |
+| `-h`               | Show help message and exit.                                                                                                                                                                    |
+
+---
+
+### 🧪 Example Scans
+
+```bash
+# Basic subdomain scan
+sublist3r -d example.com
+
+# Save results to a file
+sublist3r -d example.com -o subdomains.txt
+
+# Scan specific ports on discovered subdomains
+sublist3r -d example.com -p 80,8080,443
+
+# Enable brute-force with default wordlist
+sublist3r -d example.com -b
+
+# Use specific search engines only
+sublist3r -d example.com -e google,bing,virustotal
+
+# Use 20 threads
+sublist3r -d example.com -t 20
+
+# Verbose output
+sublist3r -d example.com -v
+
+# Help menu
+sublist3r -h
+```

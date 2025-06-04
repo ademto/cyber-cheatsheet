@@ -25,7 +25,7 @@ td code {
 
 /** Add box shadow and white background to h3-wrap inside all cols */
 .mdLayout .h2-wrap > .h2-inner > .h3-wrap {
-  @apply bg-white shadow-lg rounded-lg px-4 md:p-5; /* Apply bg-white and shadow-lg to h3-wrap */
+  @apply bg-white shadow-lg rounded-lg px-4 md:p-5 mb-5 md:mb-0; /* Apply bg-white and shadow-lg to h3-wrap */
 }
 
 .mdLayout .h2-wrap > .h2-inner> .col-span-6 {
