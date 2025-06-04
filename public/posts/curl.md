@@ -1,6 +1,6 @@
-## Getting Started
+## Getting Started {.cols-6}
 
-### Introduction
+### Introduction {.col-span-2}
 
 `Curl` is a tool for transferring data between servers, supporting protocols, including:
 
@@ -23,7 +23,7 @@
 - [Curl GitHub source repository](https://github.com/curl/curl) _(github.com)_
 - [Curl Official Website](https://curl.se/) _(curl.se)_
 
-### Options {.col-span-2 row-span-2}
+### Options {.col-span-4 row-span-2}
 
 ```bash
 -o <file>    # --output: write to file
@@ -46,7 +46,7 @@
 -I  # --head: header only
 ```
 
-### Request
+### Request {.col-span-4}
 
 ```bash
 -X POST # --request
@@ -54,7 +54,7 @@
 -F # --form: HTTP POST data for multipart/form-data
 ```
 
-### data
+### data {.col-span-2}
 
 ```bash
 # --data: HTTP post data
@@ -68,7 +68,7 @@
 -G
 ```
 
-### Header information Headers
+### Header information Headers {.col-span-3}
 
 ```bash
 -A <str>      # --user-agent
@@ -83,7 +83,7 @@
 --compressed  # use deflate/gzip
 ```
 
-### SSL
+### SSL {.col-span-3}
 
 ```bash
     --cacert <file>
@@ -226,14 +226,14 @@ $ curl --user username:password http://example.com/
 $ curl -u username:password http://example.com/
 ```
 
-### Write to file instead of stdout {.col-span-2}
+### Write to file instead of stdout {.col-span-3}
 
 ```bash
 $ curl -o file http://url/file
 $ curl --output file http://url/file
 ```
 
-### Download header information
+### Download header information {.col-span-2}
 
 ```bash
 $ curl -I url
@@ -253,7 +253,7 @@ $ curl --output file http://url/file
 $ curl -s http://url/myscript.sh
 ```
 
-### Configuration file {.col-span-2}
+### Configuration file {.col-span-3}
 
 ```bash
 curl -K file

@@ -26,3 +26,7 @@ td code {
 .mdLayout .h2-wrap > .h2-inner > .h3-wrap {
   @apply bg-white shadow-lg rounded-lg px-4 md:p-5; /* Apply bg-white and shadow-lg to h3-wrap */
 }
+
+.mdLayout .h2-wrap > .h2-inner> .col-span-6 {
+  @apply col-span-6; /* Ensure col-span-6 is applied correctly */
+}

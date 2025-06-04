@@ -94,7 +94,7 @@ ffuf -u http://example.com/FUZZ -w /usr/share/wordlists/dirb/common.txt -o resul
 
 ---
 
-### 🧪 Example Scans
+### 🧪 Example Scans {.col-span-2}
 
 ```bash
 # Basic Directory Bruteforce
