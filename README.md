@@ -2,7 +2,7 @@
 
 **Cyber Cheatsheet** is a curated, categorized collection of cybersecurity tools, commands, techniques, and resources — designed to help penetration testers, blue teamers, SOC analysts, and cybersecurity enthusiasts access critical information faster.
 
-🌐 **Live Site**: [https://cyberref.netlify.app/](https://cyberref.netlify.app/)
+🌐 **Live Site**: [https://cheatsheet.ademto.com](https://cheatsheet.ademto.com)
 
 ---
 
