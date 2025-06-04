@@ -13,9 +13,10 @@ const Navbar = ({handleSearch}) => {
           </div>
           
           <div className="icons flex items-center gap-4">
-              <button onClick={handleSearch} className='cursor-pointer bg-[#F2F2F5] text-[#6B7882] py-3 px-4 rounded-xl flex items-center gap-2 text-sm'>
+              <button onClick={handleSearch} className='cursor-pointer bg-[#F2F2F5] text-[#6B7882] p-1 rounded-full md:py-3 md:px-4 md:rounded-xl flex items-center gap-2 text-sm'>
                 <CiSearch className='text-2xl'/>
-                Search for cheatsheet</button>
+                <span className='hidden'>Search for cheatsheet</span>
+              </button>
               <Link className="text-xl hover:text-zinc-600" to="https://github.com/ademto" ><FaGithub /></Link>
               <Link className="text-xl hover:text-zinc-600" to="https://www.linkedin.com/in/emmanuel-adetoro/" ><FaLinkedin /></Link>
               <Link className="text-xl hover:text-zinc-600" to="/" ><FaXTwitter /></Link>
