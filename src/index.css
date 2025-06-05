@@ -28,6 +28,10 @@ td code {
   @apply bg-white shadow-lg rounded-lg px-4 md:p-5 mb-5 md:mb-0; /* Apply bg-white and shadow-lg to h3-wrap */
 }
 
+.mdLayout .h2-wrap>.h2-inner>.h3-wrap > h3 {
+  @apply md:mt-0;
+}
+
 .mdLayout .h2-wrap > .h2-inner> .col-span-6 {
   @apply col-span-6; /* Ensure col-span-6 is applied correctly */
 }

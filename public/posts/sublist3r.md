@@ -1,14 +1,18 @@
 ## 🔍 Sublist3r Cheatsheet {.cols-2}
 
-### 🧩 Basic Usage
+### Installation {.col-span-3}
+
+| Command                                                      | Description                                       |
+| ------------------------------------------------------------ | ------------------------------------------------- |
+| `pipx install git+https://github.com/aboul3la/Sublist3r.git` | Install Sublist3r (subdomain enum tool) via pipx. |
+
+### 🧩 Basic Usage {.col-span-3}
 
 | Command                                   | Description                                                                  |
 | ----------------------------------------- | ---------------------------------------------------------------------------- |
 | `sublist3r -d example.com`                | Enumerate subdomains for `example.com`.                                      |
 | `sublist3r -d example.com -o results.txt` | Save the output to a text file.                                              |
 | `sublist3r -d example.com -p 80,443`      | Perform subdomain discovery and check which ones respond on specified ports. |
-
----
 
 ### ⚙️ Options Overview
 
@@ -22,8 +26,6 @@
 | `-t <threads>`     | Number of threads to use (default is 10).                                                                                                                                                      |
 | `-e <engines>`     | Specify search engines/APIs to use (comma-separated). Options include: `baidu`, `google`, `bing`, `yahoo`, `ask`, `netcraft`, `dnsdumpster`, `virustotal`, `threatcrowd`, `ssl`, `passivedns`. |
 | `-h`               | Show help message and exit.                                                                                                                                                                    |
-
----
 
 ### 🧪 Example Scans
 
