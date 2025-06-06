@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { CiSearch } from "react-icons/ci";
+import { MdKeyboardCommandKey } from "react-icons/md";
 
 const Navbar = ({handleSearch}) => {
   const { pathname } = useLocation();
@@ -15,7 +16,8 @@ const Navbar = ({handleSearch}) => {
           <div className="icons flex items-center gap-4">
               <button onClick={handleSearch} className='cursor-pointer bg-[#F2F2F5] text-[#6B7882] p-1 rounded-full md:py-3 md:px-4 flex items-center gap-2 text-sm'>
                 <CiSearch className='text-2xl'/>
-                <span className='hidden md:flex pr-5'>Search for cheatsheet</span>
+                <span className='hidden md:flex pr-2'>Search for cheatsheet</span>
+                <span className='flex items-center gap-1 border rounded-sm px-1'><MdKeyboardCommandKey /> K</span>
               </button>
               <Link className="text-xl hover:text-zinc-600" to="https://github.com/ademto" ><FaGithub /></Link>
               <Link className="text-xl hover:text-zinc-600" to="https://www.linkedin.com/in/emmanuel-adetoro/" ><FaLinkedin /></Link>

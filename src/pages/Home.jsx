@@ -19,6 +19,9 @@ function Home() {
             <div className="lg:w-2/3 p-4 mx-auto mt-10">
                 <Categories />
             </div>
+            <div>
+                
+            </div>
         </section>
     )
 }
