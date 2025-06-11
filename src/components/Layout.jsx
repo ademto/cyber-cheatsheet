@@ -22,9 +22,11 @@ export default function Layout() {
   }, []);
 
   return (
-    <div className="site-wrapper">
+    <div className="min-h-screen flex flex-col">
       <Navbar handleSearch={() => setOpen((prev) => !prev)} />
-      <Outlet />
+      <main className="flex-1">
+        <Outlet />
+      </main>
       {open && <SearchModal handleSearch={() => setOpen(false)} />}
       <Footer />
     </div>
