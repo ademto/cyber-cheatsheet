@@ -13,18 +13,25 @@ const MarkdownRenderer = ({ tool }) => {
       try {
         const response = await fetch(`/posts/${tool}.md`);
 
-        // Check if the response is HTML, which means the file was not found
+        // Check if the response is successful
+        if (!response.ok) {
+          // Check if 404 to mark as missing file
+          if (response.status === 404) {
+            setFileMissing(true);
+            setError(null);
+            setMarkdownContent('');
+            return;
+          }
+          throw new Error(`Error ${response.status}: Something went wrong while fetching the file.`);
+        }
+
+        // Now check if the response is HTML, which means the file was not found
         const contentType = response.headers.get('Content-Type');
         if (contentType && contentType.includes('text/html')) {
           setFileMissing(true); // File is missing
           setError(null); // No error, just file missing
           setMarkdownContent(''); // Clear content
           return;
-        }
-
-        // Check if the response is successful
-        if (!response.ok) {
-          throw new Error(`Error ${response.status}: Something went wrong while fetching the file.`);
         }
 
         const text = await response.text();
