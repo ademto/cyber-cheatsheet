@@ -1,13 +1,12 @@
 import React from 'react'
-import { nanoid } from 'nanoid'
 import Header from '../components/Header'
 import ToolTag from '../components/ToolTag'
 import Categories from '../components/Categories'
-import { topTools, allTools } from '../tools'
+import { topTools } from '../tools'
 
 function Home() {
     const topToolsElements = topTools.map(tool => (
-        <ToolTag key={nanoid()} tool={tool} />
+        <ToolTag key={tool.slug} tool={tool} />
     ))
 
     return (
@@ -18,9 +17,6 @@ function Home() {
             </div>
             <div className="lg:w-2/3 p-4 mx-auto mt-10">
                 <Categories />
-            </div>
-            <div>
-                
             </div>
         </section>
     )
