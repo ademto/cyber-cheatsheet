@@ -1,6 +1,4 @@
-import Navbar from './Navbar'
 import HeroSection from './HeroSection'
-import Search from './Search'
 
 const Header = () => {
   return (
