@@ -4,14 +4,14 @@ export const categories = [
     "Web Application Security",
     "Password Cracking",
     "Brute Force",
+    "Cloud Security",
+    "CMS Security",
     "Wireless Attacks",
     "Post Exploitation",
-    "CMS Security",
     "Network Security",
     "Forensics & Incident Response",
     "Social Engineering",
     "Blue Team / SOC Tools",
-    "Cloud Security",
     "Binary Analysis / Reverse Engineering",
     "Command Line Essentials"
 ];
@@ -233,6 +233,15 @@ export const allTools = [
       bgColor: "bg-purple-200",
       textColor: "text-purple-900"
     },    
+    {
+      name: "File Inclusion",
+      slug: "file-inclusion",
+      description: "A vulnerability that allows attackers to include files on a server through the web browser. Common types include LFI (Local File Inclusion) and RFI (Remote File Inclusion).",
+      categories: ["Exploitation", "Web Application Security"],
+      tag: "#FileInclusion",
+      bgColor: "bg-yellow-200",
+      textColor: "text-yellow-800"
+    },
   
     // Web Application Security
     {
@@ -588,6 +597,15 @@ export const allTools = [
       bgColor: "bg-sky-300",
       textColor: "text-sky-900",
     },
+    {
+      "name": "AWS CLI",
+      "slug": "aws-cli",
+      "description": "A unified tool to manage AWS services from the command line. It enables users to script, automate, and control cloud resources efficiently.",
+      "categories": ["Cloud Security"],
+      "tag": "#AWSCLI",
+      "bgColor": "bg-blue-200",
+      "textColor": "text-blue-800"
+    },    
   
     // Binary Analysis / Reverse Engineering
     {
