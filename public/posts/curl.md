@@ -1,263 +1,113 @@
-## Getting Started {.cols-6}
-
-### Introduction {.col-span-2}
-
-`Curl` is a tool for transferring data between servers, supporting protocols, including:
-
-- HTTP
-- HTTPS
-- FTP
-- IMAP
-- LDAP
-- POP3
-- SCP
-- SFTP
-- SMB
-- SMTP
-- etc...
-
-{.cols-3 .marker-none}
-
----
-
-- [Curl GitHub source repository](https://github.com/curl/curl) _(github.com)_
-- [Curl Official Website](https://curl.se/) _(curl.se)_
-
-### Options {.col-span-4 row-span-2}
-
-```bash
--o <file>    # --output: write to file
--u user:pass # --user: authentication
-```
-
----
-
-```bash
--v   # --verbose: Make curl verbose during operation
--vv  # more verbose
--s   # --silent: don't show progress meter or errors
--S   # --show-error: When used with --silent (-sS), show errors but no progress meter
-```
-
----
-
-```bash
--i  # --include: include HTTP headers in the output
--I  # --head: header only
-```
-
-### Request {.col-span-4}
-
-```bash
--X POST # --request
--L # If the page redirects, follow the link
--F # --form: HTTP POST data for multipart/form-data
-```
-
-### data {.col-span-2}
-
-```bash
-# --data: HTTP post data
-# URL encoding (eg, status="Hello")
--d 'data'
-
-# --data pass file
--d @file
-
-# --get: send -d data via get
--G
-```
-
-### Header information Headers {.col-span-3}
-
-```bash
--A <str>      # --user-agent
-
--b name=val   # --cookie
-
--b, --cookie FILE           # Load cookies from the specified file for the URL
--c, --cookie-jar FILE       # Save cookies to the specified file from the URL
-
--H "X-Foo: y" # --header
-
---compressed  # use deflate/gzip
-```
-
-### SSL {.col-span-3}
-
-```bash
-    --cacert <file>
-    --capath <dir>
-```
-
-```bash
--E, --cert <cert> # --cert: client certificate file
-    --cert-type # der/pem/eng
--k, --insecure # For self-signed certificates
-```
-
-#### Install
-
-```bash
-apk add --update curl # install in alpine linux
-```
-
-## Example {.cols-6}
-
-### CURL GET/HEAD {.col-span-4 .row-span-2}
-
-| command                                                               | description                         |
-| :-------------------------------------------------------------------- | :---------------------------------- |
-| `curl -I https://cheatsheets.zip`                                     | `curl` sends a request              |
-| `curl -v -I https://cheatsheets.zip`                                  | `curl` request with details         |
-| `curl -X GET https://cheatsheets.zip`                                 | use explicit http method for `curl` |
-| `curl --noproxy 127.0.0.1 http://www.stackoverflow.com`               | `curl` without http proxy           |
-| `curl --connect-timeout 10 -I -k https://cheatsheets.zip`             | `curl` has no timeout by default    |
-| `curl --verbose --header "Host: www.mytest.com:8182" cheatsheets.zip` | `curl` get extra header             |
-| `curl -k -v https://www.google.com`                                   | `curl` get response with headers    |
-
-### Multiple file upload {.col-span-2}
-
-```bash
-$ curl -v --include \
---form key1=value1 \
-    --form upload=@localfilename URL
-```
-
-### Prettify json output for curl response {.col-span-2}
-
-```bash
-$ curl -XGET http://${elasticsearch_ip}:9200/_cluster/nodes | python -m json.tool
-```
-
-### CURL POST {.col-span-4}
-
-| command                                                                     | description         |
-| :-------------------------------------------------------------------------- | :------------------ |
-| `curl -d "name=username&password=123456" <URL>`                             | `curl` send request |
-| `curl <URL> -H "content-type: application/json" -d "{ \"woof\": \"bark\"}"` | `curl` sends json   |
-
-### CURL script install rvm {.col-span-2}
-
-```shell
-curl -sSL https://get.rvm.io | bash
-```
-
-### CURL Advanced {.col-span-6}
-
-| command                                                                                     | description                    |
-| :------------------------------------------------------------------------------------------ | :----------------------------- |
-| `curl -L -s http://ipecho.net/plain, curl -L -s http://whatismijnip.nl`                     | get my public `IP`             |
-| `curl -u $username:$password http://repo.dennyzhang.com/README.txt`                         | `curl` with credentials        |
-| `curl -v -F key1=value1 -F upload=@localfilename <URL>`                                     | `curl` upload                  |
-| `curl -k -v --http2 https://www.google.com/`                                                | use http2 curl                 |
-| `curl -T cryptopp552.zip -u test:test ftp://10.32.99.187/`                                  | curl `ftp` upload              |
-| `curl -u test:test ftp://10.32.99.187/cryptopp552.zip -o cryptopp552.zip`                   | curl `ftp` download            |
-| `curl -v -u admin:admin123 --upload-file package1.zip http://mysever:8081/dir/package1.zip` | upload with credentials `curl` |
-
-### Check website response time {.col-span-4}
-
-```shell
-curl -s -w \
-'\nLookup time:\t%{time_namelookup}\nConnect time:\t%{time_connect}\nAppCon time:\t%{time_appconnect}\nRedirect time:\t%{time_redirect}\nPreXfer time:\t%{time_pretransfer }\nStartXfer time:\t%{time_starttransfer}\n\nTotal time:\t%{time_total}\n' \
-     -o /dev/null https://www.google.com
-```
-
-### Use Curl to check if a remote resource is available {.col-span-2}
-
-```bash
-curl -o /dev/null --silent -Iw "%{http_code}" https://example.com/my.remote.tarball.gz
-```
-
-### Downloading file {.col-span-3}
-
-```bash
-curl https://example.com | \
-grep --only-matching 'src="[^"]*.[png]"' | \
-cut -d \" -f2 | \
-while read i; do curl https://example.com/"${i}" \
--o "${i##*/}"; done
-```
-
-Download all PNG files from the site (using GNU grep)
-
-### Download the file, save the file without changing its name {.col-span-3}
-
-```bash
-curl --remote-name "https://example.com/linux-distro.iso"
-```
-
-Rename file
-
-```bash
-curl --remote-name "http://example.com/index.html" --output foo.html
-```
-
-### continue partial download {.col-span-3}
-
-```bash
-curl --remote-name --continue-at -"https://example.com/linux-distro.iso"
-```
-
-### Download files from multiple domains {.col-span-3}
-
-```bash
-curl "https://www.{example,w3,iana}.org/index.html" --output "file_#1.html"
-```
-
-### Download a series of files {.col-span-3}
-
-```bash
-curl "https://{foo,bar}.com/file_[1-4].webp" --output "#1_#2.webp"
-```
-
-Download a series of files (output `foo_file1.webp`, `foo_file2.webp...bar_file1_webp`, etc.)
-
-### Redirect output to file {.col-span-3}
-
-```bash
-$ curl http://url/file > file
-```
-
-### Basic Authentication {.col-span-3}
-
-```bash
-$ curl --user username:password http://example.com/
-$ curl -u username:password http://example.com/
-```
-
-### Write to file instead of stdout {.col-span-3}
-
-```bash
-$ curl -o file http://url/file
-$ curl --output file http://url/file
-```
-
-### Download header information {.col-span-2}
-
-```bash
-$ curl -I url
-# display header information
-```
-
-### Write output to a file named remote_file {.col-span-2}
-
-```bash
-$ curl -o file http://url/file
-$ curl --output file http://url/file
-```
-
-### Execute remote script {.col-span-2}
-
-```bash
-$ curl -s http://url/myscript.sh
-```
-
-### Configuration file {.col-span-3}
-
-```bash
-curl -K file
-# read configuration from file
-curl --config file
-$HOME/.curlrc # default configuration file on UNIX-like systems
-```
+## cURL Cheatsheet {.cols-2}
+
+### 🧰 Installation
+
+    # Install curl (Linux/Debian-based)
+    sudo apt-get install curl
+
+    # Install curl (Linux/RPM-based)
+    sudo yum install curl
+
+    # Install curl (macOS with Homebrew)
+    brew install curl
+
+    # Verify installation
+    curl --version
+
+### 🔰 Basic Usage
+
+| Command                     | Description                            |
+| --------------------------- | -------------------------------------- |
+| `curl <url>`                | Basic GET request                      |
+| `curl -o output.html <url>` | Download and save to a file            |
+| `curl -O <url>`             | Download and save with remote filename |
+| `curl -L <url>`             | Follow redirects                       |
+| `curl -i <url>`             | Show headers and response              |
+| `curl -I <url>`             | Show only HTTP headers                 |
+| `curl -s <url>`             | Silent mode (no progress or errors)    |
+| `curl -v <url>`             | Verbose/debug output                   |
+
+### 🔐 Authentication & Headers
+
+| Command                                            | Description                                                    |
+| -------------------------------------------------- | -------------------------------------------------------------- |
+| `curl -u user:pass <url>`                          | Basic auth                                                     |
+| `curl -H "Authorization: Bearer <token>" <url>`    | Bearer token auth                                              |
+| `curl -H "Content-Type: application/json" <url>`   | Set Content-Type header                                        |
+| `curl -A "Mozilla/5.0" <url>`                      | Set User-Agent header                                          |
+| `curl -b "name=value" <url>`                       | Send cookie                                                    |
+| `curl -c cookies.txt <url>`                        | Save cookies to file                                           |
+| `curl -b cookies.txt <url>`                        | Use saved cookies                                              |
+| Chain multiple `-H` flags to send multiple headers | E.g., `curl -H "X-API-Key: key" -H "Accept: application/json"` |
+
+### 📤 Sending Data & HTTP Methods
+
+| Command                                                                | Description           |
+| ---------------------------------------------------------------------- | --------------------- |
+| `curl -X POST -d "key=value" <url>`                                    | POST form data        |
+| `curl -X POST -d @data.json -H "Content-Type: application/json" <url>` | POST JSON payload     |
+| `curl -X PUT -d '{"key":"value"}' <url>`                               | PUT request with JSON |
+| `curl -X PATCH -d '{"key":"newvalue"}' <url>`                          | PATCH request         |
+| `curl -X DELETE <url>`                                                 | DELETE request        |
+| `curl --data-urlencode "param=value with spaces" <url>`                | URL-encoded POST data |
+
+### 📁 File Uploads & Transfers
+
+| Command                                                   | Description                 |
+| --------------------------------------------------------- | --------------------------- |
+| `curl -F "file=@/path/to/file.txt" <url>`                 | Upload a file via POST      |
+| `curl -F "file1=@file1.txt" -F "file2=@file2.txt" <url>`  | Upload multiple files       |
+| `curl -T file.txt ftp://ftp.example.com --user user:pass` | Upload file via FTP         |
+| `curl -O <url1> -O <url2>`                                | Download multiple URLs      |
+| `curl -C - -O <url>`                                      | Resume interrupted download |
+
+### ⚙️ Advanced Features
+
+| Command                                            | Description                        |
+| -------------------------------------------------- | ---------------------------------- |
+| `curl --proxy http://proxy.example.com:8080 <url>` | Use a proxy                        |
+| `curl -k <url>`                                    | Ignore SSL verification (insecure) |
+| `curl --max-time 10 <url>`                         | Set max timeout in seconds         |
+| `curl --limit-rate 100K <url>`                     | Limit download speed               |
+| `curl --compressed <url>`                          | Request compressed response        |
+| `curl --http2 <url>`                               | Use HTTP/2 protocol                |
+
+### 🔍 Debugging & Output Handling
+
+| Command                              | Description                       |
+| ------------------------------------ | --------------------------------- | ------------------------------------- |
+| `curl --trace-ascii trace.txt <url>` | Trace full request/response       |
+| `curl -v <url>`                      | Verbose request and response info |
+| `curl <url> > output.html`           | Save output to a file             |
+| `curl <url>                          | grep "text"`                      | Pipe output to another command        |
+| `curl <url>                          | jq .`                             | Pretty-print JSON (with jq installed) |
+
+### 🧪 Examples
+
+    # Download a webpage and save it
+    curl -o webpage.html https://example.com
+
+    # POST JSON data to API
+    curl -X POST -H "Content-Type: application/json" -d '{"name":"test"}' http://api.example.com
+
+    # Authenticate and download with progress bar
+    curl -u user:pass --progress-bar -O https://example.com/secure/file.zip
+
+    # Test API with custom headers
+    curl -H "Authorization: Bearer abc123" -H "Accept: application/json" https://api.example.com/v1/data
+
+### 💡 Tips
+
+- Combine `-s` (silent) with `-o` or `-O` to suppress progress but save output.
+- Use `-k` **only for testing**; it bypasses SSL verification and is insecure.
+- Chain multiple `-H` flags to send multiple headers.
+- Use `--data-urlencode` for URL-encoded POST data.
+- Check `man curl` or `curl --help` for full option list.
+
+### 🔗 Resources
+
+- [Official Documentation](https://curl.se/docs/)
+- [Man Page](https://curl.se/docs/manpage.html)
+- Test endpoint: `curl https://httpbin.org` for HTTP request testing
+
+> **Note:** Replace URLs, filenames, tokens, and credentials with your actual values. Avoid exposing sensitive data in command history or logs.
