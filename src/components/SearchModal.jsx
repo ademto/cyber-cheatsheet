@@ -85,7 +85,7 @@ export default function SearchModal({ handleSearch }) {
             >
               Cancel
             </button>
-            <p className="text-xs text-gray-500 italic border p-1 rounded-sm"><kbd>Esc</kbd></p>
+            <p className="hidden md:flex text-xs text-gray-500 italic border p-1 rounded-sm"><kbd>Esc</kbd></p>
           </div>
         </div>
 

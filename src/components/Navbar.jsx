@@ -21,7 +21,7 @@ const Navbar = ({ handleSearch }) => {
           >
             <CiSearch className="text-2xl" />
             <span className="hidden md:flex pr-2">Search for cheatsheet</span>
-            <span className="flex items-center gap-1 border rounded-sm px-1">
+            <span className="hidden md:flex items-center gap-1 border rounded-sm px-1">
               <MdKeyboardCommandKey /> K
             </span>
           </button>

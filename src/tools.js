@@ -9,10 +9,10 @@ export const categories = [
     "Wireless Attacks",
     "Post Exploitation",
     "Network Security",
-    "Forensics & Incident Response",
+    // "Forensics & Incident Response",
     "Social Engineering",
     "Blue Team / SOC Tools",
-    "Binary Analysis / Reverse Engineering",
+    // "Binary Analysis / Reverse Engineering",
     "Command Line Essentials"
 ];
 

