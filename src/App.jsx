@@ -7,6 +7,7 @@ import Tools from './pages/Tool'
 import Tool from './pages/Tool'
 import NotFound404 from './pages/NotFound404'
 import Layout from './components/Layout'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   const topToolsElements = topTools.map(tool => (
@@ -15,6 +16,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
