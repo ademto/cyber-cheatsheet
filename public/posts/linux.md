@@ -169,5 +169,3 @@
 | `alias ll='ls -la'` | Create alias               |
 | `clear`             | Clear terminal screen      |
 | `watch command`     | Run command repeatedly     |
-
-## End of Cheatsheet

@@ -637,6 +637,15 @@ export const allTools = [
     },
     // Command Line Essentials
     {
+      name: "Linux",
+      slug: "linux",
+      description: "Open-source operating system used in most cybersecurity environments for development, testing, and deployment.",
+      categories: ["Command Line Essentials", "Operating Systems"],
+      tag: "#Linux",
+      bgColor: "bg-gray-200",
+      textColor: "text-gray-800",
+    },    
+    {
       "name": "SSH",
       "slug": "ssh",
       "description": "Secure Shell protocol for remote administration and encrypted communication.",
@@ -680,5 +689,15 @@ export const allTools = [
       "tag": "#CLI",
       "bgColor": "bg-indigo-100",
       "textColor": "text-indigo-800"
-    },                    
+    },          
+    {
+      name: "htop",
+      slug: "htop",
+      description: "Interactive process viewer for Unix systems, offering a real-time, color-coded display of system processes, CPU, memory, and swap usage.",
+      categories: ["Operating System", "System Monitoring"],
+      tag: "#Linux",
+      bgColor: "bg-green-200",
+      textColor: "text-green-900",
+    }
+                
 ];
